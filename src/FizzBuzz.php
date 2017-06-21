@@ -9,6 +9,9 @@ class FizzBuzz
         if ($no % 3 === 0) {
             return 'Fizz';
         }
+        if ($no % 5 === 0) {
+            return 'Buzz';
+        }
         return strval($no);
     }
 }
