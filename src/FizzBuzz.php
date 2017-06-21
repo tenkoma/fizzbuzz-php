@@ -4,8 +4,11 @@ namespace App;
 
 class FizzBuzz
 {
-    public static  function makeFizzBuzz(int $int): string
+    public static  function makeFizzBuzz(int $no): string
     {
-        return strval($int);
+        if ($no % 3 === 0) {
+            return 'Fizz';
+        }
+        return strval($no);
     }
 }

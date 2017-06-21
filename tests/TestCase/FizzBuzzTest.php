@@ -9,5 +9,6 @@ class FizzBuzzTest extends TestCase
     {
         $this->assertSame('1', FizzBuzz::makeFizzBuzz(1));
         $this->assertSame('2', FizzBuzz::makeFizzBuzz(2));
+        $this->assertSame('Fizz', FizzBuzz::makeFizzBuzz(3));
     }
 }
