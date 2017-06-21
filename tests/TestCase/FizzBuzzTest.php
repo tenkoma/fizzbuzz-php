@@ -5,12 +5,22 @@ use PHPUnit\Framework\TestCase;
 
 class FizzBuzzTest extends TestCase
 {
-    public function testMakeFizzBuzz()
+    /**
+     * @dataProvider provideMakeFizzBuzz
+     */
+    public function testMakeFizzBuzz($expected, $no)
     {
-        $this->assertSame('1', FizzBuzz::makeFizzBuzz(1));
-        $this->assertSame('2', FizzBuzz::makeFizzBuzz(2));
-        $this->assertSame('Fizz', FizzBuzz::makeFizzBuzz(3));
-        $this->assertSame('Buzz', FizzBuzz::makeFizzBuzz(5));
-        $this->assertSame('FizzBuzz', FizzBuzz::makeFizzBuzz(15));
+        $this->assertSame($expected, FizzBuzz::makeFizzBuzz($no));
+    }
+
+    public function provideMakeFizzBuzz()
+    {
+        return [
+            ['1', 1],
+            ['2', 2],
+            ['Fizz', 3],
+            ['Buzz', 5],
+            ['FizzBuzz', 15],
+        ];
     }
 }
