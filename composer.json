@@ -1,0 +1,15 @@
+{
+    "name": "tenkoma/fizzbuzz-php",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Koji Tanaka",
+            "email": "tenkoma@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^6.1"
+    }
+}
